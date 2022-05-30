@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela de Início </title>
+  <link rel="stylesheet" href="./css/styleCadastro.css">
+  <script type="text/javascript" src="./js/funcoes.js"></script>
+  <script src="sweetalert2.all.min.js"></script>
+  
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <div class="header">
+
+    <div class="container">
+
+      <a class="titulo" href="./index.html"> O Legendarium </a>
+      <a href="./home.html">Home</a>
+      <a href="./Login.html">Login</a>
+      <a class="active" href="./Cadastro.html">Cadastro</a>
+
+    </div>
+
+  </div>
+
+  <!-- FIM DO HEADER  -->
+
+  <!-- BANNER -->
+
+  <div class="Banner" style="background-image: url('./assets/mapa.jpg');">
+
+    <div class="container">
+
+      <div class="card">
+
+        <div class="formulario">
+
+          <span class="Campos">Comece Sua Aventura
+            !</span>
+
+          <span class="tipo_campo">Nome</span>
+          <input id="nomeUser_input" type="text" placeholder="Nome">
+
+          <span class="tipo_campo">E-mail:</span>
+          <input id="email_input" type="text" placeholder="Login">
+
+          <span class="tipo_campo">Senha:</span>
+          <input id="senha_input" type="password" placeholder="******">
+
+        </div>
+      </div>
+
+      <div class="card2">
+
+        <div class="formulario">
+
+          <span class="Campos">Crie Seu Personagem</span>
+
+          <span class="tipo_campo">Nome do Personagem:</span>
+          <input id="nomePer_input" type="text" placeholder="Nome do Personagem">
+
+          <span class="tipo_campo">Raça do Personagem</span>
+          <select name="raca" id="racaPer_input" class="custom-select">
+            <option value=""> Escolha sua Raça </option>
+            <option value="Elfo"> Elfo </option>
+            <option value="Humano"> Humano </option>
+            <option value="Anão"> Anão </option>
+            <option value="Orc"> Hobbit </option>
+          </select>
+
+
+          <span class="tipo_campo">Classe do Personagem</span>
+          <select name="classe" id="ClassePer_input" class="custom-select">
+            <option value=""> Escolha sua Classe </option>
+            <option value="Guerreiro"> Guerreiro </option>
+            <option value="Mago"> Mago </option>
+            <option value="Arqueiro"> Arqueiro </option>
+            <option value="Bardo"> Bardo </option>
+            <option value="Escudeiro"> Escudeiro </option>
+          </select>
+
+
+        </div>
+      </div>
+    </div>
+
+    <button class="btn" onclick="cadastrar()">Cadastrar</button>
+
+  </div>
+
+  <!-- FIM DO BANNER -->
+
+  <!-- FOOTER -->
+
+  <div class="footer">
+
+    <div class="container">
+
+      <span class="titulo">ALL THAT IS GOLD DOES NOT GLITTER, NOT ALL THOSE WHO WANDER ARE LOST; THE OLD THAT IS STRONG
+        DOES NOT WITHER, DEEP ROOTS ARE NOT REACHED BY THE FROST </span>
+
+    </div>
+
+  </div>
+
+  <!-- FIM FOOTER -->
+</body>
+
+</html>
+<script>
+  function cadastrar() {
+   // aguardar();
+
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var nomeVar = nomeUser_input.value;
+    var emailVar = email_input.value;
+    var senhaVar = senha_input.value;
+    var nomePerVar = nomePer_input.value;
+    var racaPerVar = racaPer_input.value;
+    var classePerVar = ClassePer_input.value;
+
+    if (nomeVar == "" || emailVar == "" || senhaVar == "" || nomePerVar == "" || racaPerVar == "" || classePerVar == "") {
+      Swal.fire({
+        icon: 'error',
+        title: 'Erro',
+        text: 'Campos em Branco',
+      })
+
+      // finalizarAguardar();
+      return false;
+    }
+    else {
+      setInterval(sumirMensagem, 5000)
+    }
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nomeVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar,
+        nomePerServer: nomePerVar,
+        racaPerServer: racaPerVar,
+        classePerServer: classePerVar
+      })
+    }).then(function (resposta) {
+
+      console.log("resposta: ", resposta);
+
+      if (resposta.ok) {
+        Swal.fire({
+        icon: 'error',
+        title: 'Sucesso',
+        text: 'Cadastro Realizado Com Sucesso!',
+      })
+
+        setTimeout(() => {
+          window.location = "./Login.html";
+        }, "2000")
+
+        limparFormulario();
+        // finalizarAguardar();
+      } else {
+        Swal.fire({
+        icon: 'error',
+        title: 'Erro',
+        text: 'Houve um erro ao realziar o Cadastro',
+      })
+      }
+    }).catch(function (resposta) {
+      console.log(`#ERRO: ${resposta}`);
+      // finalizarAguardar();
+    });
+
+    return false;
+
+  }
+  
+
+  function sumirMensagem() {
+    //cardErro.style.display = "none"
+  }
+
+</script>

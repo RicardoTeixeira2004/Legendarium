@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela de Login </title>
+  <link rel="stylesheet" href="./css/styleLogin.css">
+  <script src="sweetalert2.all.min.js"></script>
+  <script src="./js/funcoes.js"></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <div class="header">
+
+    <div class="container">
+
+        <a class="titulo" href="./index.html"> O Legendarium </a>
+        <a href="./home.html">Home</a>
+        <a class="active" href="./Login.html">Login</a>
+        <a href="./Cadastro.html">Cadastro</a>
+        
+
+    </div>
+
+</div>
+
+  <!-- FIM DO HEADER  -->
+
+  <!-- BANNER -->
+
+  <div class="Banner" style="background-image: url('./assets/mapa.jpg');">
+
+    <div class="container">
+
+      
+      <div class="card">
+
+        <div class="formulario">
+
+          <span class="Campos" id="TituloLogin">Bem vindo Viajante!</span>
+
+          <span class="tipo_campo">E-mail:</span>
+          <input id="email_input" type="text" placeholder="Login">
+
+          <span class="tipo_campo">Senha:</span>
+          <input id="senha_input" type="password" placeholder="******">
+
+          <button class="btn" onclick="entrar()">entrar</button>
+
+        </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FIM DO BANNER -->
+
+  <!-- FOOTER -->
+
+  <div class="footer">
+
+    <div class="container">
+
+      <span class="titulo">ALL THAT IS GOLD DOES NOT GLITTER, NOT ALL THOSE WHO WANDER ARE LOST; THE OLD THAT IS STRONG
+        DOES NOT WITHER, DEEP ROOTS ARE NOT REACHED BY THE FROST </span>
+
+    </div>
+
+  </div>
+
+  <!-- FIM FOOTER -->
+</body>
+</html>
+<script>
+
+
+  function entrar() {
+
+      var emailVar = email_input.value;
+      var senhaVar = senha_input.value;
+
+      if (emailVar == "" || senhaVar == "") {
+        Swal.fire({
+        icon: 'error',
+        title: 'Erro',
+        text: 'Campos em Branco',
+      })
+          return false;
+      }
+      else {
+          setInterval(sumirMensagem, 5000)
+      }
+
+      console.log("FORM LOGIN: ", emailVar);
+      console.log("FORM SENHA: ", senhaVar);
+
+      fetch("/usuarios/autenticar", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+              emailServer: emailVar,
+              senhaServer: senhaVar
+          })
+      }).then(function (resposta) {
+          console.log("ESTOU NO THEN DO entrar()!")
+
+          if (resposta.ok) {
+              console.log(resposta);
+
+              resposta.json().then(json => {
+                  console.log(json);
+                  console.log(JSON.stringify(json));
+
+                  sessionStorage.EMAIL_USUARIO = json.email;
+                  sessionStorage.NOME_USUARIO = json.nome;
+                  sessionStorage.ID_USUARIO = json.id;
+
+                  setTimeout(function () {
+                      window.location = "./jogos.html";
+                  }, 1000); // apenas para exibir o loading
+
+              });
+
+          } else {
+
+              console.log("Houve um erro ao tentar realizar o login!");
+
+              resposta.text().then(texto => {
+                  console.error(texto);
+                  
+              });
+          }
+
+      }).catch(function (erro) {
+          console.log(erro);
+      })
+
+      return false;
+  }
+
+  function sumirMensagem() {
+      cardErro.style.display = "none"
+  }
+
+</script>

@@ -1,0 +1,278 @@
+@font-face {
+    font-family: "rings";
+    src: url("../DAFONT/rings.ttf");
+}
+
+@font-face {
+    font-family: "basic";
+    src: url("../DAFONT/basic.ttf");
+}
+
+@font-face {
+    font-family: "runes";
+    src: url("../DAFONT/runes.ttf");
+}
+
+@font-face {
+    font-family: "basic2";
+    src: url("../DAFONT/basic2.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'rings';
+    box-sizing: border-box;
+    background-color: #1a0400;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: url("../ASSETS/texturaCouro.jpg");
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #31201E;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid #D1BD97;
+    /* creates padding around scroll thumb */
+}
+
+
+/* HEADER  */
+
+.header {
+    font-family: 'rings';
+    color: #D1BD97;
+    background: url("../ASSETS/dark-leather.png");
+    background-size: fit-content;
+    border-bottom: 5px solid #D1BD97;
+    text-shadow: 0 0 10px black;
+}
+
+.header .container {
+    color: #D1BD97;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+}
+
+.header .titulo {
+    text-align: left;
+    font-size: 50px;
+    text-decoration: none;
+    color: #D1BD97;
+}
+
+.container {
+    overflow: hidden;
+    background-color: rgb(32, 30, 30);
+    background: url("../ASSETS/dark-leather.png");
+}
+
+.container a {
+    float: right;
+    color: #D1BD97;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.container a:hover {
+    opacity: 90%;
+    color: black;
+}
+
+.container a.active {
+    color: white;
+}
+
+
+/* FIM DO HEADER*/
+
+
+/* BANNER INICIAL */
+
+.Banner {
+    height: auto;
+    width: auto;
+    background-color: #1a0400;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.container1 {
+    background: url("../ASSETS/valarAinur.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 550px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform .2s;
+}
+
+.b {
+    color: white;
+    font-size: 80px;
+    text-decoration: none;
+    text-shadow: 0 0 10px black;
+}
+
+.desc1 {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 0 0 10px black;
+}
+
+.container2 {
+    background: url("../ASSETS/valinor.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 550px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform .2s;
+}
+
+.container3 {
+    background: url("../ASSETS/sword.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 475px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform .2s;
+}
+
+
+
+.imageBox:hover {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../ASSETS/valarAinur.jpg");
+}
+
+.imageBox2:hover {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../ASSETS/valinor.jpg");
+}
+
+.imageBox3:hover {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../ASSETS/sword.jpg");
+}
+btn :hover {
+    text-shadow: 0 0 15px black;
+    -ms-transform: scale(1.05);
+    /* IE 9 */
+    -webkit-transform: scale(1.05);
+    /* Safari 3-8 */
+    transform: scale(1.05);
+}
+
+.btn {
+    background-image: url("../ASSETS/btn.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border-style: none;
+    height: 75px;
+    width: 270px;
+    font-family: 'rings';
+    color: #D1BD97;
+    font-size: 35px;
+    text-shadow: 0 0 5px black;
+    cursor: pointer;
+}
+
+/* FIM BANNER INICIAL */
+
+/* CAIXAS INFORMATIVAS */
+
+.caixaInforma {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("../ASSETS/rough-cloth.png");
+    background-size: auto;
+    background-color: #1a0400;
+    transform: 2s;
+
+}
+
+
+
+.caixaInforma :hover {
+    text-shadow: 0 0 15px black;
+    -ms-transform: scale(1.05);
+    /* IE 9 */
+    -webkit-transform: scale(1.05);
+    /* Safari 3-8 */
+    transform: scale(1.05);
+}
+
+
+/* FOOTER */
+
+.footer {
+    font-family: 'runes';
+    color: #D1BD97;
+    background: url("../ASSETS/dark-leather.png");
+    background-size: fit-content;
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 5px solid #D1BD97;
+}
+
+.footer .container {
+    background: url(".../ASSETS/dark-leather.png");
+    background-color: #1a0400;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+}
+
+.footer .titulo {
+    text-align: center;
+    font-size: 15px;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, .3), 0px -1px 0px rgba(0, 0, 0, .7);
+}
+
+.decorativo {
+    border-bottom: 5px solid #D1BD97;
+}
+
+/* FIM DO FOOTER */

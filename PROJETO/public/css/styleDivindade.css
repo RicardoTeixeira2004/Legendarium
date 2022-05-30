@@ -1,0 +1,334 @@
+@font-face {
+    font-family: "rings";
+    src: url("../DAFONT/rings.ttf");
+}
+
+@font-face {
+    font-family: "basic";
+    src: url("../DAFONT/basic.ttf");
+}
+
+@font-face {
+    font-family: "runes";
+    src: url("../DAFONT/runes.ttf");
+}
+
+@font-face {
+    font-family: "basic2";
+    src: url("../DAFONT/basic2.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'rings';
+    box-sizing: border-box;
+    background-color: #1a0400;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: url("../ASSETS/texturaCouro.jpg");
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #31201E;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid #D1BD97;
+    /* creates padding around scroll thumb */
+}
+
+
+/* HEADER  */
+
+.header {
+    font-family: 'rings';
+    color: #D1BD97;
+    background: url("../ASSETS/dark-leather.png");
+    background-size: fit-content;
+    border-bottom: 5px solid #D1BD97;
+    text-shadow: 0 0 10px black;
+}
+
+.header .container {
+    color: #D1BD97;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+}
+
+.header .titulo {
+    text-align: left;
+    font-size: 50px;
+    text-decoration: none;
+    color: #D1BD97;
+}
+
+.container {
+    overflow: hidden;
+    background-color: rgb(32, 30, 30);
+    background: url("../ASSETS/dark-leather.png");
+}
+
+.container a {
+    float: right;
+    color: #D1BD97;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.container a:hover {
+    opacity: 90%;
+    color: black;
+}
+
+.container a.active {
+    color: white;
+}
+
+
+/* FIM DO HEADER*/
+
+/* BANNER */
+#banner {
+    height: 85vh;
+    width: auto;
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../ASSETS/treesofvalinor.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerTitulos {
+    height: max-content;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'basic2';
+}
+
+.titulo {
+    font-size: 100px;
+    text-shadow: 0 0 10px black;
+    font-family: 'rings';
+}
+
+.Subtilo {
+    font-size: 30px;
+    text-shadow: 0 0 10px black;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-image: url("../ASSETS/btn.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border-style: none;
+    height: 75px;
+    width: 255px;
+    font-family: 'rings';
+    color: #D1BD97;
+    font-size: 35px;
+    text-shadow: 0 0 5px black;
+    cursor: pointer;
+    transform: 2s;
+}
+
+.containerPerguntas{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.Pergunta {
+    font-size: 40px;
+    text-shadow: 0 0 10px black;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: 'basic2';
+}
+
+#containerCards {
+    width: 100%;
+    align-items: center;
+}
+
+.cards{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    cursor: pointer;
+    font-size: 50px;
+    text-align: center;
+    color: #D1BD97;
+    
+    
+    
+}
+
+.card1{
+    height:550px;
+    width: 300px;
+    border: 5px solid #D1BD97;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 15px black;
+}
+
+.card2{
+    height: 550px;
+    width: 300px;
+    border: 5px solid #D1BD97;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 15px black;
+}
+
+.card3{
+    height: 550px;
+    width: 300px;
+    border: 5px solid #D1BD97;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 15px black;
+}
+
+.card4{
+    height: 550px;
+    width: 300px;
+    border: 5px solid #D1BD97;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 15px black;
+}
+
+.cards :hover {
+    text-shadow: 0 0 15px black;
+    -ms-transform: scale(1.10);
+    /* IE 9 */
+    -webkit-transform: scale(1.10);
+    /* Safari 3-8 */
+    transform: scale(1.10);
+    color: white;
+}
+
+.valarcards :hover {
+    text-shadow: 0 0 15px black;
+    -ms-transform: scale(1.10);
+    /* IE 9 */
+    -webkit-transform: scale(1.10);
+    /* Safari 3-8 */
+    transform: scale(1.10);
+    color: white;
+}
+
+
+#containerValar {
+    width: 100%;
+    align-items: center;
+}
+
+.valarcards{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-size: 50px;
+    text-align: center;
+    color: #D1BD97;
+}
+
+.Valar{
+    height:700px;
+    width: 500px;
+    border: 5px solid #D1BD97;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 10px 15px black;
+}
+
+.Descricao{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height:max-content;
+    width: 1000px;
+    border: 5px solid #D1BD97;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 15px black;
+    background: url("../ASSETS/texturaCouro.jpg");
+    font-size: 35px;
+    font-family: 'basic2';
+}
+
+/* FIM DO BANNER */
+
+
+
+/* FOOTER */
+
+.footer {
+    font-family: 'runes';
+    color: #D1BD97;
+    background: url("../ASSETS/dark-leather.png");
+    background-size: fit-content;
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 5px solid #D1BD97;
+}
+
+.footer .container {
+    background: url("../ASSETS/dark-leather.png");
+    background-color: #1a0400;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+}
+
+.footer .titulo {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'runes';
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, .3), 0px -1px 0px rgba(0, 0, 0, .7);
+}
+
+.decorativo {
+    border-bottom: 5px solid #D1BD97;
+}
+
+/* FIM DO FOOTER */

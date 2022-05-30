@@ -1,0 +1,322 @@
+@font-face {
+    font-family: "rings";
+    src: url("../DAFONT/rings.ttf");
+  }
+  
+  @font-face {
+    font-family: "basic";
+    src: url("../DAFONT/basic.ttf");
+  }
+  
+  @font-face {
+    font-family: "runes";
+    src: url("../DAFONT/runes.ttf");
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'rings';
+    background-color: black;
+    box-sizing: border-box;
+    background-color: #1a0400;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: url("../assets/texturaCouro.jpg");
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #31201E;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid #D1BD97;
+    /* creates padding around scroll thumb */
+  }
+  
+  
+ /* HEADER  */
+
+.header {
+    font-family: 'rings';
+    color: #D1BD97;
+    background: url("../assets/dark-leather.png");
+    background-size: fit-content;
+    border-bottom: 5px solid #D1BD97;
+    text-shadow: 0 0 10px black;
+}
+
+.header .container {
+    color: #D1BD97;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+}
+
+.header .titulo {
+    text-align: left;
+    font-size: 50px;
+    text-decoration: none;
+    color: #D1BD97;
+}
+
+.container {
+    overflow: hidden;
+    background-color: rgb(32, 30, 30);
+    background: url("../assets/dark-leather.png");
+  }
+  
+  .container a {
+    float: right;
+    color: #D1BD97;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+  }
+  
+  .container a:hover {
+    opacity: 90%;
+    color: black;
+  }
+  
+  .container a.active {
+    color: white;
+  }
+
+
+/* FIM DO HEADER*/
+  
+  /* BANNER  */
+  
+  .Banner {
+    height: 85vh;
+    width: auto;
+    color: white;
+    background-image: url("../assets/realidade.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: transform .2s;
+  
+  }
+
+  .link {
+    font-size: 100px;
+    color: white;
+    text-align: center;
+    text-decoration: wavy;
+  }
+  
+  
+  .inicio:hover {
+    -ms-transform: scale(1.5);
+    /* IE 9 */
+    -webkit-transform: scale(1.5);
+    /* Safari 3-8 */
+    transform: scale(1.5);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../assets/realidade.jpg");
+  }
+  
+  .Banner .container {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: space-evenly;
+    width: 100%;
+  
+  }
+  
+  
+  /* FORMULARIO  */
+  
+  .Banner .container .card {
+    height: 600px;
+    width: 725px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-image: url("../assets/frame.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: 2s;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+}
+
+  .formulario .Campos {
+    padding-top: 100px;
+    font-size: 50px;
+    color: #D1BD97;
+    font-weight: bold;
+    text-shadow: 0 0 5px black;
+  
+  }
+
+  .Banner .container .card2 .formulario .Campos {
+    padding-top: 100px;
+    font-size: 50px;
+    color: #D1BD97;
+    font-weight: bold;
+    text-shadow: 0 0 5px black;
+
+  }
+
+  
+  .formulario .tipo_campo {
+    font-size: 25px;
+    font-weight: 500 !important;
+    color: #31201E;
+  }
+  
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  input {
+    margin-bottom: 10px;
+    background-image: url("../assets/dark-leather.png");
+    background-color: #041814;
+    border: 1px solid #D1BD97;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    color: wheat;
+    font-family: 'basic';
+    font-size: 25px;
+  }
+  
+  .btn {
+    background-image: url("../assets/btn.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border-style: none;
+    height: 75px;
+    width: 255px;
+    font-family: 'rings';
+    color: #D1BD97;
+    font-size: 35px;
+    text-shadow: 0 0 5px black;
+    cursor: pointer;
+    transform: 2s;
+  }
+
+    .Banner :hover {
+      -ms-transform: scale(1.05);
+      /* IE 9 */
+      -webkit-transform: scale(1.05);
+      /* Safari 3-8 */
+      transform: scale(1.05);
+  }
+
+.Banner .container .card2 {
+    height: 600px;
+    width: 725px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-image: url("../assets/frame.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: 2;
+    
+  }
+
+  
+  /* FIM DO FORMULARIO*/
+
+  /* FIM DO BANNER*/
+
+  /* SELECT*/
+
+  .custom-select
+  {
+    position: relative;
+    display: block;
+    max-width: 600px;
+    min-width: 180px;
+    margin: 0 auto;
+    border: 1px solid #D1BD97;
+    background-image: url("../assets/dark-leather.png");
+    background-color: #041814;
+    z-index: 50;
+  }
+  
+  
+  select
+  {
+    border: none;
+    outline: none;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+    padding: 12px 55px 15px 15px;
+    font-size: 20px;
+    font-family: 'basic';
+    color: #D1BD97;
+    border-radius: 10px;
+  }
+    
+  
+   
+/* FIM DO SELECT */
+
+/* FOOTER */
+  
+  .footer {
+    font-family: 'runes';
+    color: #D1BD97;
+    background: url("../assets/dark-leather.png");
+    background-size: fit-content;
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 5px solid #D1BD97;
+  }
+  
+  .footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+  }
+  
+  .footer .titulo {
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  /* FIM DO FOOTER */
