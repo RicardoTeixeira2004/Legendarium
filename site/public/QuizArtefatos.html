@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Artefatos </title>
+    <link rel="stylesheet" href="./css/styleDivindade.css">
+    <script type="text/javascript" src="./js/artefatos.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <div class="container">
+
+            <a class="titulo" href="./index.html"> O Legendarium </a>
+            <a href="./home.html">Home</a>
+            <a href="./Jogos.html">Menu de Jogos</a>
+            <a href="./personagem.html">Meu Personagem</a>
+
+        </div>
+
+    </div>
+
+    <!-- FIM DO HEADER  -->
+
+    <!-- BANNER  -->
+
+    <div class="BannerArtefatos" id="banner">
+<div id="sumir">
+
+    <div class="containerTitulos" id="containerTitulos">
+
+        <span class="titulo" id="titulo"> Quiz Artefatos </span>
+
+        <span class="Subtilo" id="subtitulo"> Existem diversos artefatos mágicos de imenso poder em arda, desde incíveis joias, a afiadas espadas, átravez desse quize
+            descubra qual destes artefatos você teria posse e utilizaria em sua Jornada!  </span>
+
+        <button class="btn"  onclick="iniciarDivindade()" id="btn"> Iniciar </button>
+    </div>
+</div>
+       
+
+        <div class = "containerPerguntas" id="containerPerguntas" style="display: none;"">
+
+            <span class="Pergunta" id="Pergunta"> Você tem a chance de conseguir um dos incríveis artefatos de arda, oque você mais valoriza nele?</span>
+
+        </div>
+
+        <div id="containerCards" style="display: none;">
+
+            <div class="cards">
+
+                <div class="card1" id="card1" onclick="mudanca(1)"> Beleza </div>
+
+                <div class="card2" id="card2" onclick="mudanca(2)"> Função </div>
+    
+                <div class="card3" id="card3" onclick="mudanca(3)"> Valor </div>
+    
+                <div class="card4" id="card4" onclick="mudanca(4)"> Poder </div>
+
+            </div>
+          
+
+        </div>
+
+        <div id="containerValar" style="display: none;">
+
+            <div class="valarcards" id="valarcards">
+
+                <div class="Valar" id="Valar">  </div>
+
+                <div class="Descricao" id="Descricao"> </div>
+
+                
+            </div>
+
+            <button class="btn"  onclick="voltar()" id="btn2"> Voltar </button>
+          
+
+        </div>
+
+
+    </div>
+
+    <!-- FIM DO BANNER  -->
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        <div class="container">
+
+            <span class="titulo">ALL THAT IS GOLD DOES NOT GLITTER, NOT ALL THOSE WHO WANDER ARE LOST; THE OLD THAT
+                IS
+                STRONG DOES NOT WITHER, DEEP ROOTS ARE NOT REACHED BY THE FROST </span>
+
+        </div>
+
+    </div>
+
+    <!-- FIM FOOTER -->
+
+</body>
+
+</html>

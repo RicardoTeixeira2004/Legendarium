@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu personagem </title>
+    <link rel="stylesheet" href="./css/stylePersonagem.css">
+    <script type="text/javascript" src="./js/funcoes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body onload="validarSessao(); grafico1(); grafico2()">
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <div class="container">
+
+            <a class="titulo" href="./index.html"> O Legendarium </a>
+            <a href="./home.html">Home</a>
+            <a href="./Jogos.html">Menu de Jogos</a>
+            <a href="./personagem.html" class="active">Meu Personagem</a>
+
+        </div>
+
+    </div>
+
+    <!-- FIM DO HEADER  -->
+
+    <!-- BANNER  -->
+
+    <div class="banner" id="banner">
+
+        <div class="container" id="container">
+
+            <div class="personagem" id="personagem">
+
+                <div class="cardPersonagem" id="cardPersonagem"></div>
+
+            </div>
+
+            <div class="cardsDesc" id="cardsDesc">
+
+                <div class="racaDesc" id="racaDesc"></div>
+
+                <div class="classeDesc" id="classeDesc"></div>
+
+            </div>
+
+            <div class="btns" id="btns">
+
+                <button class="btn" onclick="sair()"> Voltar</button>
+                <button class="btn" onclick="limparSessao()"> Sair </button>
+
+            </div>
+
+        </div>
+
+        <div class="containerDash">
+
+            <div class="dashCard">
+
+                <div class="card">
+
+                    <canvas id="graficoRaca" style="height: 200px;"> </canvas>
+
+                </div>
+
+
+                <div class="card">
+
+                    <canvas id="graficoClasse" style="height: 200px;"> </canvas>
+
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- FIM DO BANNER  -->
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        <div class="containerFooter">
+
+            <span class="titulo">ALL THAT IS GOLD DOES NOT GLITTER, NOT ALL THOSE WHO WANDER ARE LOST; THE OLD THAT IS
+                STRONG
+                DOES NOT WITHER, DEEP ROOTS ARE NOT REACHED BY THE FROST </span>
+
+        </div>
+
+    </div>
+
+    <!-- FIM FOOTER -->
+
+
+
+
+    Olá <span id="b_usuario"> usuário</span> <br>
+    Olá <span id="m_usuario"> usuário</span> <br>
+
+
+
+
+</body>
+
+</html>
+<script>
+    function sair() {
+        window.location = "./jogos.html";
+    }
+    Chart.defaults.color = '#FFF';
+    // const ctx = document.getElementById('graficoRaca').getContext('2d');
+    // var graficoRaca = new Chart(ctx, {
+    //     type: 'doughnut',
+    //     data: {
+    //         labels: ['Elfos', 'Anões', 'Hobbits', 'Humanos'],
+    //         datasets: [{
+    //             label: '# of Votes',
+    //             data: [12, 19, 3, 5],
+    //             backgroundColor: [
+    //                 'rgba(160, 82, 45, 0.9)',
+    //                 'rgba(139, 69, 19, 0.9)',
+    //                 'rgba(150, 105, 25, 0.9)',
+    //                 'rgba(74, 4, 4, 0.9)'
+    //             ],
+    //             borderColor: [
+    //                 'rgba(160, 82, 45, 1)',
+    //                 'rgba(139, 69, 19, 1)',
+    //                 'rgba(150, 105, 25, 1)',
+    //                 'rgba(74, 4, 4, 1)'
+    //             ],
+    //             borderWidth: 1,
+
+    //         }]
+
+    //     },
+    //     options: {
+    //         plugins: {
+    //         legend: {
+    //             labels: {
+    //                 font: {
+    //                     size: 25,
+    //                     family: 'basic2'
+
+    //                 }
+    //             }
+    //         }
+    //         },
+
+    //         scales: {
+    //             y: {
+    //                 beginAtZero: true
+    //             }
+    //         }
+    //     }
+    // });
+
+
+    // const ctx2 = document.getElementById('graficoClasse').getContext('2d');
+    // const graficoClasse = new Chart(ctx2, {
+    //     type: 'doughnut',
+    //     data: {
+    //         labels: ['Guerreiros', 'Arqueiros', 'Magos', 'Escudeiros', 'Bardos'],
+    //         datasets: [{
+    //             label: '# of Votes',
+    //             data: [12, 19, 3, 5, 23],
+    //             backgroundColor: [
+    //                 'rgba(160, 82, 45, 0.9)',
+    //                 'rgba(139, 69, 19, 0.9)',
+    //                 'rgba(150, 105, 25, 0.9)',
+    //                 'rgba(74, 4, 4, 0.9)',
+    //                 'rgba(196, 164, 132, 0.9)'
+    //             ],
+    //             borderColor: [
+    //                 'rgba(160, 82, 45, 1)',
+    //                 'rgba(139, 69, 19, 1)',
+    //                 'rgba(150, 105, 25, 1)',
+    //                 'rgba(74, 4, 4, 1)',
+    //                 'rgba(196, 164, 132, 1)'
+    //             ],
+    //             borderWidth: 1,
+
+    //         }]
+
+    //     },
+    //     options: {
+    //         plugins: {
+    //         legend: {
+    //             labels: {
+    //                 font: {
+    //                     size: 20,
+    //                     family: 'basic2'
+
+    //                 }
+    //             }
+    //         }
+    //         },
+
+    //         scales: {
+    //             y: {
+    //                 beginAtZero: true
+    //             }
+    //         }
+    //     }
+    // });
+
+
+    function grafico1() {
+        fetch('/usuarios/obterDadosRacas').then(function (res) {
+            if (res.ok) {
+                res.json().then(function (resposta) {
+                    console.log(resposta);
+
+                    let dados =
+                    {
+                        labels: [],
+                        datasets: [{
+                            label: '# of Votes',
+                            data: [],
+                            backgroundColor: [
+                                'rgba(160, 82, 45, 0.9)',
+                                'rgba(139, 69, 19, 0.9)',
+                                'rgba(150, 105, 25, 0.9)',
+                                'rgba(74, 4, 4, 0.9)',
+                                'rgba(196, 164, 132, 0.9)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 255, 255, 0.5)',
+                                'rgba(255, 255, 255, 0.5)',
+                                'rgba(255, 255, 255, 0.5)',
+                                'rgba(255, 255, 255, 0.5)',
+                                'rgba(255, 255, 255, 0.5)'
+                            ],
+                            borderWidth: 1,
+                        }]
+
+
+                    }
+
+                    for (let contador = 0; contador < resposta.length; contador++) {
+                        dados.labels.push(resposta[contador].racaperso);
+                        dados.datasets[0].data.push(resposta[contador].Quantidade);
+                    }
+
+                    const configGraficoRacas = {
+                        type: 'doughnut',
+                        data: dados,
+                        options: {
+                            plugins: {
+                                title: {
+                                    display: true,
+                                    text: 'Habitantes da Terra-Média',
+                                    font: {
+                                            size: 25,
+                                            family: 'rings'
+                                        }
+                                    
+                                },
+                                    legend: {
+                                    labels: {
+                                        font: {
+                                            size: 20,
+                                            family: 'basic2'
+                                        }
+                                    }
+                                }
+                            },
+
+                        }
+                    };
+
+                    const contextoRaca = document.getElementById('graficoRaca').getContext('2d');
+                    window.graficoRaca = new Chart(contextoRaca, configGraficoRacas);
+
+                })
+            }
+        })
+    }
+
+    function grafico2() {
+        fetch('/usuarios/obterDadosClasses').then(function (res) {
+            if (res.ok) {
+                res.json().then(function (resposta) {
+                    console.log(resposta);
+
+                    let dados =
+                    {
+                        labels: [],
+                        datasets: [{
+                            label: '# of Votes',
+                            data: [],
+                            backgroundColor: [
+                                'rgba(160, 82, 45, 0.9)',
+                                'rgba(139, 69, 19, 0.9)',
+                                'rgba(150, 105, 25, 0.9)',
+                                'rgba(74, 4, 4, 0.9)',
+                                'rgba(196, 164, 132, 0.9)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 255, 255, 0.5)',
+                                'rgba(255, 255, 255, 0.5)',
+                                'rgba(255, 255, 255, 0.5)',
+                                'rgba(255, 255, 255, 0.5)',
+                                'rgba(255, 255, 255, 0.5)'
+                            ],
+                            borderWidth: 1,
+                        }]
+
+
+                    }
+
+                    for (let contador = 0; contador < resposta.length; contador++) {
+                        dados.labels.push(resposta[contador].classePerso);
+                        dados.datasets[0].data.push(resposta[contador].Quantidade);
+                    }
+
+                    const configGraficoClasses = {
+                        type: 'doughnut',
+                        data: dados,
+                        options: {
+                            plugins: {
+                                title: {
+                                    display: true,
+                                    text: 'Classes da Terra-Média',
+                                    font: {
+                                            size: 25,
+                                            family: 'rings'
+                                        }
+                                    
+                                },
+                                    legend: {
+                                    labels: {
+                                        font: {
+                                            size: 20,
+                                            family: 'basic2'
+                                        }
+                                    }
+                                }
+                            },
+
+                        }
+                    };
+
+                    const contextoClasses = document.getElementById('graficoClasse').getContext('2d');
+                    window.graficoClasses = new Chart(contextoClasses, configGraficoClasses);
+
+                })
+            }
+        })
+    }
+
+</script>

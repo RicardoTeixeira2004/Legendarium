@@ -1,0 +1,288 @@
+@font-face {
+    font-family: "rings";
+    src: url("../DAFONT/rings.ttf");
+}
+
+@font-face {
+    font-family: "basic";
+    src: url("../DAFONT/basic.ttf");
+}
+
+@font-face {
+    font-family: "runes";
+    src: url("../DAFONT/runes.ttf");
+}
+
+@font-face {
+    font-family: "basic2";
+    src: url("../DAFONT/basic2.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'rings';
+    box-sizing: border-box;
+    background-color: #1a0400;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: url("./ASSETS/texturaCouro.jpeg");
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #31201E;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid #D1BD97;
+    /* creates padding around scroll thumb */
+}
+
+
+/* HEADER  */
+
+.header {
+    font-family: 'rings';
+    color: #D1BD97;
+    background: url("../ASSETS/dark-leather.png");
+    background-size: fit-content;
+    border-bottom: 5px solid #D1BD97;
+    text-shadow: 0 0 10px black;
+}
+
+.header .container {
+    color: #D1BD97;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+}
+
+.header .titulo {
+    text-align: left;
+    font-size: 50px;
+    text-decoration: none;
+    color: #D1BD97;
+}
+
+.header .container {
+    overflow: hidden;
+    background-color: rgb(32, 30, 30);
+    background: url("../ASSETS/dark-leather.png");
+}
+
+.header .container a {
+    float: right;
+    color: #D1BD97;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.header .container a:hover {
+    opacity: 90%;
+    color: black;
+}
+
+.header .container a.active {
+    color: white;
+}
+
+
+/* FIM DO HEADER/
+
+/* BANNER */
+
+.banner {
+    height: auto;
+    width: auto;
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../ASSETS/fundoPersonagem.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: max-content;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.personagem {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+
+.cardPersonagem {
+    height:600px;
+    width: 400px;
+    margin: 50px;
+    background-image: url("../ASSETS/manwe.jpg");
+    border: 5px solid #D1BD97;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 15px black;
+
+}
+
+.cardsDesc {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+    text-align: center;
+    color: #D1BD97;
+    font-family: 'basic2';
+}
+
+.racaDesc {
+    height: auto;
+    width: 700px;
+    text-align: justify;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 5px solid #D1BD97;
+    background-size: contain;
+    background-position: center;
+    background: url("../ASSETS/texturaCouro.jpg");
+    font-size: 25px;
+
+}
+
+.classeDesc {
+    height: auto;
+    width: 700px;
+    text-align: justify;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 5px solid #D1BD97;
+    background-size: cover;
+    background-position: bottom;
+    background: url("../ASSETS/texturaCouro.jpg");
+    font-size: 25px;
+
+}
+
+.btns {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 50px;
+    text-align: center;
+    color: #D1BD97;
+
+}
+
+.btn {
+    background-image: url("../ASSETS/btn.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border-style: none;
+    height: 75px;
+    width: 255px;
+    font-family: 'rings';
+    color: #D1BD97;
+    font-size: 35px;
+    text-shadow: 0 0 5px black;
+    cursor: pointer;
+    transform: 2s;
+}
+
+.containerDash {
+    height: 450px;
+    width: 85%;
+    margin-bottom: 50px;
+    background-image: url("../ASSETS/texturaCouro.jpg");
+    border: 5px solid #D1BD97;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 15px black;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashCard {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    justify-content: space-around;
+}
+
+.card {
+    text-align: center;
+    font-size: 30px;
+}
+
+canvas {
+    color: white;
+}
+
+
+
+/* FIM DO BANNER */
+
+
+
+/* FOOTER */
+
+.footer {
+    font-family: 'runes';
+    color: #D1BD97;
+    background: url("../ASSETS/dark-leather.png");
+    background-size: fit-content;
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 5px solid #D1BD97;
+}
+
+.footer .containerFooter {
+    background: url("../ASSETS/dark-leather.png");
+    background-color: #1a0400;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+}
+
+.footer .titulo {
+    text-align: center;
+    font-size: 15px;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, .3), 0px -1px 0px rgba(0, 0, 0, .7);
+}
+
+.decorativo {
+    border-bottom: 5px solid #D1BD97;
+}
+
+/* FIM DO FOOTER */
